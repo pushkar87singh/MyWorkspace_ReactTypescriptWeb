@@ -3,8 +3,8 @@ import { Redirect, RouteComponentProps } from "@reach/router";
 import { styled } from "@material-ui/core";
 import Permission from "../auth-context-provider/Permission";
 import { IStyledArguments } from "../../types/styled-arguments";
-//import IStyledArguments from "../../types/styled-arguments";
-
+import { routes } from "../../utils/routes";
+import { IUser } from "../../types/user";
 const HeaderSpacer = styled("div")(({ theme }: IStyledArguments) => ({
   height: theme.layout.headerHeight,
   width: "100%"
@@ -59,9 +59,10 @@ export function ProtectedRoute<T = void>({
   leaderComponent,
   ...rest
 }: IProtectedRouteProps & Partial<T>): JSX.Element {
+  let Component: React.ElementType = component;
   return (
     <>
-      <h1>Welcome to Protyectd Routing</h1>
+      <Component {...rest} />
     </>
   );
 }
