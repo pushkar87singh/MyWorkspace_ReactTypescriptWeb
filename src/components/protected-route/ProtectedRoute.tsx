@@ -23,5 +23,45 @@ export interface IProtectedRouteProps extends RouteComponentProps {
   leaderComponent?: React.ElementType;
   path: string;
 }
+const FlexContainer = styled("div")(({ theme }: IStyledArguments) => ({
+  display: "flex",
+  minHeight: `calc(100vh - ${theme.layout.headerHeight})`
+}));
 
-export function ProtectedRoute<T = void>() {}
+const ComponentWrapper = styled("div")(({ theme }: IStyledArguments) => ({
+  width: "100%",
+  marginLeft: theme.layout.navDrawerWidthClosed,
+  [theme.breakpoints.up("xl")]: {
+    marginLeft: 0
+  }
+}));
+
+type Win = Window & typeof globalThis;
+type ExtendedWindow = Win & {
+  prevLocation: string;
+};
+const doNavLog = (path: string, win: ExtendedWindow) => {
+  if (!win.prevLocation) {
+    win.prevLocation = path;
+  } else {
+    //Please uncomment below line after Appolo client import
+    //socket.emit('navigate-log', [win.prevLocation, path]);
+
+    win.prevLocation = path;
+  }
+};
+
+export function ProtectedRoute<T = void>({
+  component,
+  unauthorizedRedirectTo = routes.login,
+  withPermission,
+  leader,
+  leaderComponent,
+  ...rest
+}: IProtectedRouteProps & Partial<T>): JSX.Element {
+  return (
+    <>
+      <h1>Welcome to Protyectd Routing</h1>
+    </>
+  );
+}
