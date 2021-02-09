@@ -1,10 +1,11 @@
 import "./styles.css";
-
+import Typography from "@material-ui/core/Typography";
+import HeaderBar from "./components/header/header-bar/HeaderBar";
 export default function App() {
   return (
     <div className="App">
-      <h1>My React typescript web application learning</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <Typography variant="h4">Welcome to Typescript</Typography>
+      <HeaderBar />
     </div>
   );
 }
