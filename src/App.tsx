@@ -17,6 +17,7 @@ export default function App() {
         component={HelloTesting}
         path={routes.admin.viewInsight}
       />
+      {/* <Todos /> */}
     </div>
   );
 }

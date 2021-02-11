@@ -5,6 +5,7 @@ import Permission from "../auth-context-provider/Permission";
 import { IStyledArguments } from "../../types/styled-arguments";
 import { routes } from "../../utils/routes";
 import { IUser } from "../../types/user";
+
 const HeaderSpacer = styled("div")(({ theme }: IStyledArguments) => ({
   height: theme.layout.headerHeight,
   width: "100%"
