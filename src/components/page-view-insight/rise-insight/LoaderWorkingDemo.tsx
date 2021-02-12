@@ -12,7 +12,7 @@ const test = {
   loading: false
 };
 
-const RiseInsightContent = () => {
+const LoaderWorkingDemo = () => {
   return (
     <>
       <Loader {...test} errorMessage="Test Message of your choice">
@@ -24,4 +24,4 @@ const RiseInsightContent = () => {
   );
 };
 
-export default RiseInsightContent;
+export default LoaderWorkingDemo;
