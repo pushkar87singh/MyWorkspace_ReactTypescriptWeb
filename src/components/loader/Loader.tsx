@@ -32,6 +32,8 @@ const Loader = <T extends object>({
   children
 }: ILoaderProps<T> & { children: RenderFn<T> }) => {
   const classes = useStyles({});
+  console.log("loading>>>>>", loading);
+  console.log("error>>>>>", error);
   return (
     <>
       {loading || error || !data
