@@ -12,7 +12,7 @@ import LoaderWorkingDemo from "./components/page-view-insight/rise-insight/Loade
 export default function App() {
   return (
     <div className="App">
-      <HeaderBar>Welcome to My AppBar Header</HeaderBar>
+      {/* <HeaderBar>Welcome to My AppBar Header</HeaderBar> */}
       <Typography variant="h4">Welcome to Typescript</Typography>
       <ProtectedRoute
         component={LoaderWorkingDemo}

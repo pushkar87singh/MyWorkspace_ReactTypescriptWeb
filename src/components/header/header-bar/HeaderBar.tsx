@@ -1,10 +1,10 @@
 import React from "react";
 import { AppBar } from "@material-ui/core";
 import { styled } from "@material-ui/styles";
-import { IstyledArguments } from "../../../types/styled-arguments";
+import { IStyledArguments } from "../../../types/styled-arguments";
 
 const HeaderBar = styled((props) => <AppBar position="fixed" {...props} />)(
-  ({ theme }: IstyledArguments) => ({
+  ({ theme }: IStyledArguments) => ({
     background: theme.palette.primary.main,
     zIndex: theme.zIndex.drawer + 1,
     display: "flex",
